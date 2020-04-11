@@ -1,0 +1,102 @@
+\chapter{Implementation}
+
+% Containing a comprehensive description of the implementation of your software, including the language(s) and platform chosen, problems encountered, any changes made to the design as a result of the implementation, etc.
+\section{Data}
+\subsection{Info}
+\begin{itemize}
+    \item Armchair Analysis
+    \item 2000-2019
+\end{itemize}
+\subsection{Covariates}
+\begin{itemize}
+    \item Distance
+    \item Temperature
+    \item Away game
+    \item Surface
+    \item Precipitation
+    \item Wind
+    \item Altitude
+    \item Pressure
+    \item Icing
+    \item Year
+    \item Seasons
+    \item Postseason
+    \item Interactions?
+\end{itemize}
+\subsection{Preprocessing}
+\begin{itemize}
+    \item Missing values and imputation
+    \item Pressure categorisation
+    \item Further preprocessing depends on the experiment
+\end{itemize}
+
+\section{Imbalance}
+\begin{itemize}
+    \item Choosing H for fair comparison of experiments.
+    \item Plot L1 vs H for coarsened raw.
+\end{itemize}
+
+\section{Experiments}
+
+\subsection{Without Matching}
+\subsubsection{Preprocessing}
+\begin{itemize}
+    \item Outliers
+\end{itemize}
+\subsubsection{Imbalance}
+\begin{itemize}
+    \item Table of multivariate L1 imbalance for each variable as the treatment
+\end{itemize}
+\subsubsection{Regression}
+\begin{itemize}
+    \item Model dependence?
+\end{itemize}
+\subsubsection{Analysis of Residuals}
+
+\subsection{With Matching}
+\subsubsection{Coarsening}
+\begin{itemize}
+    \item Density plots and choice of boundaries
+    \item Relaxation on distance
+\end{itemize}
+\subsubsection{Altitude}
+\subsubsubsection{Imbalance}
+\begin{itemize}
+    \item Plot multivariate L1/\% matched for relaxed distance.
+    \item Plot univariate L1 for relaxed distance
+\end{itemize}
+\subsubsubsection{Regression}
+\begin{itemize}
+    \item Plot coefficients of interest for relaxed distance
+\end{itemize}
+\subsubsubsection{Analysis of Residuals}
+\subsubsection{Icing}
+\subsubsubsection{Imbalance}
+\begin{itemize}
+    \item Multivariate L1 for relaxed distance
+\end{itemize}
+\subsubsubsection{Regression}
+\begin{itemize}
+    \item Coefficients of interest for relaxed distance
+\end{itemize}
+\subsubsubsection{Analysis of Residuals}
+\subsubsection{Away Game}
+\subsubsubsection{Imbalance}
+\begin{itemize}
+    \item Multivariate L1 for relaxed distance
+\end{itemize}
+\subsubsubsection{Regression}
+\begin{itemize}
+    \item Coefficients of interest for relaxed distance
+\end{itemize}
+\subsubsubsection{Analysis of Residuals}
+\subsubsection{Pressure}
+\subsubsubsection{Imbalance}
+\begin{itemize}
+    \item Multivariate L1 for relaxed distance
+\end{itemize}
+\subsubsubsection{Regression}
+\begin{itemize}
+    \item Coefficients of interest for relaxed distance
+\end{itemize}
+\subsubsubsection{Analysis of Residuals}

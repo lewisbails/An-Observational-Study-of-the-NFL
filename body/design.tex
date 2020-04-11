@@ -1,0 +1,42 @@
+\chapter{Design}
+
+% Containing a comprehensive description of the design chosen, how it addresses the problem, and why it is designed the way it is.
+
+% Methods?
+
+% Sample imbalance results in model dependence which can cause unstable estimated causal effects. The unmatched sample has a larger imbalance than the matched sample, hence larger model dependence. By highlighting the discrepancy between the two sets of estimates and the associated imbalances of the samples used, we may shed light on the trustworthiness of one experiment's estimates over the other.
+
+
+For causal inference of some variable on field goals, we consider two cohorts of kicks. One in which our variable of interest is present, and the other where it is not. In an ideal world, every kick in one group has a perfectly matched counterfactual, where the only difference is from our treatment variable. As such, any difference in conversion rate may be attributed to that treatment variable. In observational studies such as ours, however, we are limited to choosing pairs of counterfactuals that are "close-enough" by some criteria. Hence there is some residual imbalance between the groups, which increases model dependence, bias, and ultimately undermines claims of causation. As mentioned, previous studies of field goals have not performed any kind of matching and the quality of their estimates may have suffered because of this. Within this study we aim to highlight the differences between the two approaches.
+
+\section{Experiments}
+\begin{itemize}
+    \item Phase 1 - Without matching
+    \item Phase 2 - With matching
+    \item Match, quantify imbalance, regress, assess model dependence.
+\end{itemize}
+
+\section{Methods}
+\subsection{Imbalance}
+\begin{itemize}
+    \item Want to minimise imbalance.
+    \item How to quantify imbalance
+    \item Some measures quantify univariate imbalance, but multivariate is what we really desire.
+    \item Present L1, L2 multidimensional histogram similarity.
+\end{itemize}
+\subsection{Matching}
+\begin{itemize}
+    \item Try to approximate blocked/randomised trial so we can make claims of causation.
+    \item CEM approximates blocked design, while propensity approximates random.
+    \item Bounds imbalance
+    \item weights for strata
+    \item Independent univariate imbalance
+    \item Intuitive
+\end{itemize}
+\subsection{Regression}
+\begin{itemize}
+    \item Do i really need to explain this?
+    \item weights
+    \item model dependence. interactions, polynomial terms, etc
+    \item Analysis of residuals
+\end{itemize}
